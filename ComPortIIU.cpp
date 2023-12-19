@@ -75,7 +75,7 @@ int main() {
 	
 	unsigned char Address[1] = { 0x4D };
 
-	unsigned char readVersion[4] = { 0x00, 0x01 };
+	unsigned char readVersion[4] = { 0x00, 0x02 };
 	unsigned short CRC = CRC16_modbus(readVersion, 2);
 	readVersion[3] = CRC >> 8;
 	readVersion[2] = CRC & 0xff;
